@@ -1,0 +1,91 @@
+<div class="container-fluid">
+    <!-- <h3>Registration Form</h3> -->
+    <form #userForm="ngForm" >
+        {{userForm.value | json}}
+        <!-- <hr> {{userModel | json}} -->
+        <!-- <table>
+            <tr>
+                <td> -->
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="firstname">First Name</label><span class="asterisc-required">*</span>
+                    <input type="text" name="firstName" #name="ngModel" [class.is-invalid]="name.invalid && name.touched" 
+                    class="form-control" required type="text" [(ngModel)]="firstName"/>
+                    <small class="text-danger" *ngIf="name.touched && !name.valid">Please enter First Name</small>
+
+                </div>
+                <div class="form-group">
+                    <label for="middlename">Email</label><span class="asterisc-required">*</span>
+                    <input type="text" name="emailID" #emailid="ngModel"  class="form-control" required type="email" [(ngModel)]="emailID" />
+                    <small class="text-danger" *ngIf="emailid.touched && !emailid.valid">Please enter valid Email ID</small>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="lastname">Last Name</label><span class="asterisc-required">*</span>
+                    <input type="text" #lname="ngModel" [class.is-invalid]="lname.invalid && lname.touched" 
+                    name="lastName" class="form-control" required type="text" [(ngModel)]="lastName" />
+                    <small class="text-danger" *ngIf="lname.touched && !lname.valid">Last Name is required</small>
+                </div>
+                <div class="form-group">
+                    <label for="lastname">Contact</label><span class="asterisc-required">*</span>
+                    <input type="text" #contactno="ngModel" pattern="^\d{10}$"  name="contact" 
+                    class="form-control" required type="text" [(ngModel)]="contact" />
+                    <small class="text-danger" *ngIf="contactno.touched && !contactno.valid">Contact is required</small>
+                </div>
+            </div>
+        </div>
+    <!-- </td>
+</tr>
+</table>
+<table>
+    <tr>
+        <td> -->
+             <h4>Delivery Address</h4>
+                <div ngModelGroup="deliveryAddress">
+                    <div class="row">
+                
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>House No.</label>
+                                <input type="text" #housenum="ngModel" name="houseNO" class="form-control" type="text" [(ngModel)]="houseNO" />
+                            </div>
+                            <div class="form-group">
+                                <label>State</label>
+                                <input type="text" #statename="ngModel" name="state" class="form-control" type="text" [(ngModel)]="state" />
+                            </div>
+                            <div class="form-group">
+                                <label>Street</label>
+                                <input type="text" #streetName="ngModel" name="street" class="form-control" type="text" [(ngModel)]="street" />
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>City</label>
+                                <input type="text" #cityName="ngModel" name="city" class="form-control" type="text" [(ngModel)]="city" />
+                            </div>
+                            <div class="form-group">
+                                <label>Landmark</label>
+                                <input type="text" #landmarkename="ngModel" name="landmark" class="form-control" type="text" [(ngModel)]="landmark" />
+                            </div>
+                            <div class="form-group">
+                                <label>pincode</label>
+                                <input type="text" #pincodenum="ngModel" name="pincode" class="form-control" type="text" [(ngModel)]="pincode" />
+                            </div>
+                        </div>
+                
+                
+                    </div>
+        </div>
+            <div class="col-sm-12">
+                <input type="button" value="New" class="btn btn-default" />
+                <input type="submit" value="Register" (click)="save(userForm)" [disabled]=!userForm.valid class="btn btn-success" />
+            </div>
+           
+        
+    <!-- </td>
+</tr>
+</table> -->
+    </form>
+</div>
