@@ -10,6 +10,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { HomeComponent } from './home/home.component';
 import { UserService } from './registration/user.service';
 import { HttpModule } from "@angular/http";
+import { UserdetailsComponent } from './userdetails/userdetails.component';
 
 //configure routing 
 const appRoutes: Routes = [
@@ -17,6 +18,7 @@ const appRoutes: Routes = [
   { path: 'AboutUs', component: AboutusComponent },
   { path: 'ContactUs', component: ContactusComponent },
   { path: 'SignUp', component: RegistrationComponent },
+  { path: 'UserDetails', component: UserdetailsComponent },
   { path: '', redirectTo: '/Home', pathMatch: 'full' }
 ];
 
@@ -26,7 +28,8 @@ const appRoutes: Routes = [
     RegistrationComponent,
     AboutusComponent,
     ContactusComponent,
-    HomeComponent
+    HomeComponent,
+    UserdetailsComponent
   ],
   imports: [
     BrowserModule,

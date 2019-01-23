@@ -1,5 +1,5 @@
 
-export class User{
+export class User1{
      
     public id:string;
     public firstName:string;

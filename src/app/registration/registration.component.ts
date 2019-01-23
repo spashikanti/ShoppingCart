@@ -31,7 +31,8 @@ export class RegistrationComponent implements OnInit {
           //this.toastr.error(data.Errors[0]);
       });
   }
-
+ 
+ 
   resetForm()
   {
     

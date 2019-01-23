@@ -1,0 +1,95 @@
+<div [hidden]="!canChange">
+  <table class="table table-bordered table-strpied">
+      <tr>
+          <td>
+              <div>
+                  <div class="form-group">
+                      <label for="firstname">First Name</label>
+                      <input type="text" name="firstname" class="form-control" [(ngModel)]="user.firstName" />
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="lastname">Last Name</label>
+                      <input type="text" name="lastname" class="form-control" [(ngModel)]="user.lastName" />
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="dob">Password</label>
+                      <input type="text" name="pwd" class="form-control" [(ngModel)]="user.password" />
+                  </div>
+         
+                  <div class="form-group">
+                      <label for="city">Email ID</label>
+                      <input type="text" name="city" class="form-control" [(ngModel)]="user.emailID" />
+                  </div>
+                  <div class="form-group">
+                      <label for="pincode">Contact</label>
+                      <input type="text" name="pincode" class="form-control" [(ngModel)]="user.contact" />
+                  </div>
+             </div>
+          </td>         
+      </tr>
+      <tr>
+          <td>
+              <input type="button" value="New"  class="btn btn-default" />
+          </td>
+          <td>
+              <input type="button" value="Save" (click)="save()" class="btn btn-success" />
+          </td>
+      </tr>
+  </table>
+</div>
+<div [hidden]="canChange">
+  <table class="table table-bordered table-strpied">
+      <tr>
+          <td>
+              <input type="button" value="Add New" class="btn btn-success" (click)="add()" />
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <table class="table table-bordered table-strpied">
+                  <thead>
+                      <tr>
+                          <!-- <td *ngFor="let c of tableHeaders">{{c|uppercase}}</td>
+                          <td></td>
+                          <td></td> -->
+                          <td>First Name</td>
+                          <td>Last Name</td>
+                          <td>Password</td>
+                          <td>Email ID</td>
+                          <td>Contact</td>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let p of users">
+                          <td >
+                              {{p.firstName}}
+                          </td>
+                          <td >
+                            {{p.lastName}}
+                        </td>
+                        <td >
+                            {{p.password}}
+                        </td>
+                        <td >
+                            {{p.emailID}}
+                        </td>
+                        <td >
+                            {{p.contact}}
+                        </td>
+                          <td>
+                              <input type="button" (click)="edit(p)" value="Edit" class="btn btn-warning" />
+                          </td>
+                          <td>
+                              <input type="button" (click)="delete(p)" value="Delete" class="btn btn-danger" />
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
+          </td>
+      </tr>
+  </table>
+</div>
