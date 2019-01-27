@@ -11,6 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { UserService } from './registration/user.service';
 import { HttpModule } from "@angular/http";
 import { UserdetailsComponent } from './userdetails/userdetails.component';
+import { ProductsComponent } from './product/product.component';
+import { ProductService } from './product/product.service';
 
 //configure routing 
 const appRoutes: Routes = [
@@ -29,7 +31,8 @@ const appRoutes: Routes = [
     AboutusComponent,
     ContactusComponent,
     HomeComponent,
-    UserdetailsComponent
+    UserdetailsComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule
   ],
-  providers: [UserService],
+  providers: [UserService, ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
