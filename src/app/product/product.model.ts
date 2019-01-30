@@ -4,6 +4,7 @@ export class Product {
     public description: string;
     public specification: Specification;
     public image: string;
+    public price: string;
     public createdDate: Date;
     public createdBy: string;
     public modifiedDate: Date;

@@ -19,6 +19,21 @@ export class ProductsComponent{
       console.log(this.products);
   }
 
+  getBase64(event) {
+    let me = this;
+    let file = event.target.files[0];
+    let reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = function () {
+      //me.modelvalue = reader.result;
+      console.log(reader.result);
+      return reader.result;
+    };
+    reader.onerror = function (error) {
+      console.log('Error: ', error);
+    };
+ }
+
   getData(){
     this.prodService.getAll().subscribe((resp: Response) => {this.products = resp.json();});
   }

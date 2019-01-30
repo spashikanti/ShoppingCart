@@ -13,6 +13,7 @@ import { HttpModule } from "@angular/http";
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { ProductsComponent } from './product/product.component';
 import { ProductService } from './product/product.service';
+import { AddproductComponent } from './admin/addProduct/addproduct.component';
 
 //configure routing 
 const appRoutes: Routes = [
@@ -21,6 +22,7 @@ const appRoutes: Routes = [
   { path: 'ContactUs', component: ContactusComponent },
   { path: 'SignUp', component: RegistrationComponent },
   { path: 'UserDetails', component: UserdetailsComponent },
+  // { path: 'AddProduct', component: AddproductComponent },
   { path: '', redirectTo: '/Home', pathMatch: 'full' }
 ];
 
@@ -33,6 +35,7 @@ const appRoutes: Routes = [
     HomeComponent,
     UserdetailsComponent,
     ProductsComponent
+    // ,AddproductComponent
   ],
   imports: [
     BrowserModule,
