@@ -7,12 +7,6 @@ export class UserService {
 readonly rootUrl ="http://localhost:4050/api/UserDetailsApi/"
   constructor( private http: Http) { }
   
-  //get all users
-  // getAll():Observable<Response>{
-  //   var res = this.http.get(`${this.rootUrl}/rootUrl/All`);
-  //   return res;
-  // }
-
   getAll():Observable<Response>{
     var res = this.http.get(`${this.rootUrl}/User/All`);
     return res;
