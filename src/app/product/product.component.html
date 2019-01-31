@@ -1,10 +1,12 @@
 <div *ngFor="let p of products">
-  <div class="card" style="width: 18rem;">
-    <img class="card-img-top" alt="Card image cap" src={{p.image}} >
+  <div class="card">
+    <img class="card-img-top" alt="Card image cap" src="{{ p.image }}" />
     <div class="card-body">
-      <h5 class="card-title">{{p.productName}}</h5>
-      <p class="card-text">{{p.description}}</p>
-      <p class="card-text">₹{{p.price}}</p>
+      <h5 class="card-title" title="{{ p.description }}">
+        <a href="#">{{ p.productName }}</a>
+      </h5>
+      <p class="card-rating"><span>3.8</span> (4)</p>
+      <p class="card-text">₹{{ p.price }}</p>
       <a href="#" class="btn btn-primary">Buy</a>
     </div>
   </div>
