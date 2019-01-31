@@ -1,0 +1,39 @@
+<div class="container-fluid">
+  <form #productForm="ngForm" >
+      <!-- {{productForm.value | json}} -->
+      <div class="row">
+          <div class="col-sm-6">
+              <div class="form-group">
+                  <label for="productName">Product Name</label><span class="asterisc-required">*</span>
+                  <input type="text" name="productName" #pName="ngModel" 
+                  [class.is-invalid]="pName.invalid && pName.touched" 
+                  class="form-control" required type="text" [(ngModel)]="productName"/>
+                  <small class="text-danger" *ngIf="pName.touched && !pName.valid">Please enter First Name</small>
+              </div>
+              <div class="form-group">
+                  <label for="description">Description</label><span class="asterisc-required">*</span>
+                  <input type="text" name="description" #desc="ngModel"  class="form-control" [(ngModel)]="description" />
+                  <small class="text-danger" *ngIf="desc.touched && !desc.valid">Please enter Description</small>
+              </div>
+          </div>
+          <div class="col-sm-6">
+              <div class="form-group">
+                  <label for="image">Image Url</label><span class="asterisc-required">*</span>
+                  <input type="text" #img="ngModel" [class.is-invalid]="img.invalid && img.touched" 
+                  name="image" class="form-control" required type="text" [(ngModel)]="image" />
+                  <small class="text-danger" *ngIf="img.touched && !img.valid">Image Url is required</small>
+              </div>
+              <div class="form-group">
+                  <label for="price">Price</label><span class="asterisc-required">*</span>
+                  <input type="text" #prce="ngModel" name="price" 
+                  class="form-control" required type="text" [(ngModel)]="price" />
+                  <small class="text-danger" *ngIf="prce.touched && !prce.valid">Price is required</small>
+              </div>
+          </div>
+      </div>
+          <div class="col-sm-12">
+              <input type="submit" value="Register" (click)="save(productForm)" [disabled]=!productForm.valid class="btn btn-success" />
+              <input type="reset" value="Reset" class="btn btn-success" />
+          </div>
+  </form>
+</div>
