@@ -4,20 +4,46 @@
   list-style: none;
 }
 
-.top-brand{
-	background-color: #f2f2f2;
-	padding: 10px 0px;
-	height: 50px;
-	margin-bottom: 0px;
+.top-brand {
+  background-color: #f2f2f2;
+  padding: 10px 0px;
+  height: 50px;
+  margin-bottom: 0px;
 }
 
 /* form validatiion */
-.input.ng-invalid.ng-touched
-{
+.input.ng-invalid.ng-touched {
   border-color: red;
 }
-.asterisc-required
-{
+.asterisc-required {
   color: red;
-  font-weight:bold;
+  font-weight: bold;
+}
+/* Product CSS styles*/
+.card {
+  float: left;
+  width: 20%;
+  height: 400px;
+  margin: 0 10px 20px 10px;
+}
+.card img {
+  width: 50%;
+  height: 200px;
+  padding: 0;
+  margin: 0 25%;
+}
+.card-body {
+  text-align: center;
+  position: relative;
+  bottom: 2em;
+}
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+#demo {
+  background: red;
+  width: 95%;
+  height: 300px;
+  margin: 0 auto;
 }
