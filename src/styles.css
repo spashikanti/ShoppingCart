@@ -22,9 +22,9 @@
 /* Product CSS styles*/
 .card {
   float: left;
-  width: 20%;
+  width: 22.5%;
   height: 400px;
-  margin: 0 10px 20px 10px;
+  margin: 15px;
 }
 .card img {
   width: 50%;
@@ -43,7 +43,9 @@
 }
 #demo {
   background: red;
-  width: 95%;
   height: 300px;
+}
+.fluid-container {
+  width: 95%;
   margin: 0 auto;
 }
