@@ -9,6 +9,6 @@ export class User{
    
     public emailID:string;
     
-    public contact:string
+    public contact:string;
  
 }

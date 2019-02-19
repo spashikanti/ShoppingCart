@@ -39,7 +39,7 @@
 }
 .carousel-inner img {
   width: 100%;
-  height: 300px;
+  height: 100%;
 }
 #demo {
   background: red;
@@ -48,4 +48,19 @@
 .fluid-container {
   width: 95%;
   margin: 0 auto;
+}
+.bg-primary {
+  background-color: #343a40 !important;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #343a40 !important;
+  border-color: #343a40;
+}
+.btn-success,
+.btn-success:focus,
+.btn-success:hover {
+  color: #000;
+  background-color: #fff !important;
+  border-color: #fff;
 }
